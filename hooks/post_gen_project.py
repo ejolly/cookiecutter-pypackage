@@ -12,8 +12,8 @@ def git_init():
     subprocess.call("git init",shell=True)
     subprocess.call("git add .",shell=True)
     subprocess.call("git commit --quiet -m 'Initial project creation.'",shell=True)
-    {% if cookiecutter.documentation == 'gh' %}
     subprocess.call("make -C docs html-quiet",shell=True)
+    {% if cookiecutter.documentation == 'github-pages' %}
     subprocess.call("git checkout --orphan gh-pages",shell=True)
     subprocess.call("git reset --hard",shell=True)
     subprocess.call("cp -r docs/_build/html/ .", shell=True)
@@ -37,7 +37,7 @@ def user_note():
     print("5) Setup basic travis CI configuration (you need to edit+run travis_pypi_setup.py to complete this process)")
     {% endif %}
 
-    {% if cookiecutter.documentation == 'gh' %}
+    {% if cookiecutter.documentation == 'github-pages' %}
     print("6) Setup your documentation for compatibility with Github pages using a separate gh-pages branch.\n   Just push that branch to GH to see live documentation at {{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}\n")
     {% else %}
     print("6) Setup your documentation for compatiblity with readthedocs\n")

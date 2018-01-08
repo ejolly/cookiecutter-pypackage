@@ -24,7 +24,9 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
+	{% if cookiecutter.documentation == 'github-pages' %}
 	@echo "  html-site  to make HTML files and copy and commit them to gh-pages branch"
+	{% endif %}
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
 	@echo "  pickle     to make pickle files"
@@ -52,7 +54,7 @@ clean:
 
 html-quiet:
 	$(SPHINXBUILD) -Q -N -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
-
+{% if cookiecutter.documentation == 'github-pages' %}
 html-site:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	git checkout gh-pages
@@ -62,7 +64,7 @@ html-site:
 	git checkout master
 	@echo
 	@echo "Build finished. HTML pages commited to gh-pages branch."
-
+{% endif %}
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo

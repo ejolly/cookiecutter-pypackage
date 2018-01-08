@@ -12,7 +12,7 @@
 ## Installation
 `pip install git+https://github.com/ejolly/{{ cookiecutter.project_slug }}`
 
-{% if cookiecutter.documentation == 'gh' %}
+{% if cookiecutter.documentation == 'github-pages' %}
 ## [Documentation](http://eshinjolly.com/{{ cookiecutter.project_slug }}/)
 {% else %}
 ## [Documentation](https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/index.html)
