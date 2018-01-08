@@ -24,7 +24,6 @@ def git_init():
     subprocess.call("git checkout master",shell=True)
     {% endif %}
 
-
 def user_note():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\nSuccessfully created {{ cookiecutter.project_name }}!")
