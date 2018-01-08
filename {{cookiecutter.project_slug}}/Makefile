@@ -1,4 +1,4 @@
-.PHONY: clean clean-test clean-pyc clean-build docs help
+.PHONY: clean clean-test clean-pyc clean-build clean-docs docs help
 .DEFAULT_GOAL := help
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
@@ -26,8 +26,10 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
+clean: clean-build clean-pyc clean-test clean-docs ## remove all docs, build, test, coverage and Python artifacts
 
+clean-docs: ## remove all docs
+	rm -rf docs/_build/*
 
 clean-build: ## remove build artifacts
 	rm -fr build/
@@ -47,13 +49,10 @@ clean-test: ## remove test and coverage artifacts
 	rm -f .coverage
 	rm -fr htmlcov/
 
-lint: ## check style with flake8
-	flake8 {{ cookiecutter.project_slug }} tests
-
-test: ## run tests quickly with the default Python
+test-brief: ## run tests using pytest with the default Python
 	py.test
-	
-test-all: ## run tests on every Python version with tox
+
+test: ## run tests using all tox environments
 	tox
 
 coverage: ## check code coverage quickly with the default Python
@@ -77,10 +76,10 @@ release: clean ## package and upload a release
 	python setup.py sdist upload
 	python setup.py bdist_wheel upload
 
-dist: clean ## builds source and wheel package
+dist: clean ## builds source and wheel package for pypi
 	python setup.py sdist
 	python setup.py bdist_wheel
 	ls -l dist
 
-install: clean ## install the package to the active Python's site-packages
+install: clean ## install this package locally
 	python setup.py install

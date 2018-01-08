@@ -2,11 +2,12 @@
   "full_name": "Eshin Jolly",
   "email": "eshin.jolly.gr@dartmouth.edu",
   "github_username": "ejolly",
-  "project_name": "Python Boilerplate",
+  "project_name": "Python StarterKit",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
+  "project_short_description": "Python StarterKit is a package that...",
   "pypi_username": "{{ cookiecutter.github_username }}",
   "version": "0.1.0",
   "use_pypi_deployment_with_travis": "y",
+  "documentation": ["gh","rtd"],
   "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
 }

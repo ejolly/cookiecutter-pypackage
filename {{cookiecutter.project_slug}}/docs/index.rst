@@ -1,20 +1,24 @@
-Welcome to {{ cookiecutter.project_name }}'s documentation!
-======================================
+{{ cookiecutter.project_name }}
+===============================
 
-Contents:
+{{ cookiecutter.project_short_description }}
+
+Installation
+------------
+
+.. code-block:: python
+
+    pip install git+https://github.com/ejolly/{{ cookiecutter.project_slug }}
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
-   readme
-   installation
    usage
-   modules
-   history
+   api
 
-Indices and tables
-==================
+:doc:`Usage <usage>`
+-------------------
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+:doc:`API <api>`
+----------------
