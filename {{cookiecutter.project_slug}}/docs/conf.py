@@ -93,6 +93,9 @@ exclude_patterns = ['_build','Thumbs.db', '.DS_Store']
 # documents.
 #default_role = None
 
+# Dont sort alphabetically
+autodoc_member_order = 'bysource'
+
 # If true, '()' will be appended to :func: etc. cross-reference text.
 #add_function_parentheses = True
 
