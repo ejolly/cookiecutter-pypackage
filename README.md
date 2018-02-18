@@ -27,7 +27,7 @@ Then start the project creator using this template:
 - [GH-pages hosted documentation](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/) in separate branch [optional]
 - [Readthedocs](https://readthedocs.org/) hosted documentation compatibility [optional]
 - Super useful Make commands:
-    - `make install` : local install
+    - `make install` : local install (editable)
     - `make clean` : remove docs, build, pyc, and test files
     - `make docs` : build documentation
     - `make test`: run multi-environment tests with tox

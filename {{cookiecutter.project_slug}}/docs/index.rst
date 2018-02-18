@@ -8,7 +8,7 @@ Installation
 
 .. code-block:: python
 
-    pip install git+https://github.com/ejolly/{{ cookiecutter.project_slug }}
+    pip install git+https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 
 .. toctree::
    :maxdepth: 2

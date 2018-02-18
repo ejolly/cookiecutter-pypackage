@@ -82,4 +82,4 @@ dist: clean ## builds source and wheel package for pypi
 	ls -l dist
 
 install: clean ## install this package locally
-	python setup.py install
+	pip install -e .
