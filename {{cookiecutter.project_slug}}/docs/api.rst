@@ -10,8 +10,8 @@ This reference provides detailed documentation for all the features in {{ cookie
     .. automodule:: {{ cookiecutter.project_slug }}.functions
     :members:
 
-    :mod:`{{ cookiecutter.project_slug }}.classes`: Visual Rating Scale
-    -------------------------------------------------------------------
+    :mod:`{{ cookiecutter.project_slug }}.classes`: My_Class
+    --------------------------------------------------------
 
     .. autoclass:: {{ cookiecutter.project_slug }}.classes.MyClass
     :members:
