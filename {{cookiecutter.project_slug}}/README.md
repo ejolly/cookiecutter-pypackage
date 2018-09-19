@@ -13,7 +13,7 @@
 `pip install git+https://github.com/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}`
 
 {% if cookiecutter.documentation == 'github-pages' %}
-    {% if cookiecutter.full_name == 'Eshin Jolly' }
+    {% if cookiecutter.full_name == 'Eshin Jolly' %}
     ## [Documentation](http://eshinjolly.com/{{ cookiecutter.project_slug }}/)
     {% else %}
     ## [Documentation](http://{{ cookiecutter.project_slug }}.github.io/)
